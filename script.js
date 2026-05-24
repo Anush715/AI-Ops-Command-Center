@@ -6,7 +6,7 @@
 // -----------------------------
 // GLOBAL STATE
 // -----------------------------
-
+console.log("🔥 SCRIPT STARTED");
 console.log("Script loaded successfully");
 let systemRunning = false;
 let requestCount = 0;
@@ -49,34 +49,37 @@ const alerts = [
 // -----------------------------
 document.addEventListener("DOMContentLoaded", function () {
 
-   main = document.querySelector(".main");
-  
+  if (window.__uiInitialized) return;
+  window.__uiInitialized = true;
+
+  main = document.querySelector(".main");
+
+  main.innerHTML = "";
 
 
   // -------------------------
   // SYSTEM STATUS CARD
   // -------------------------
-  const statusBox = document.createElement("div");
-  statusBox.classList.add("card");
-  statusBox.innerHTML = `
-    <h2>System Status</h2>
-    <p>🟢 All systems operational</p>
-  `;
-  main.appendChild(statusBox);
-  statusCard = statusBox;
-
+const statusBox = document.createElement("div");
+statusBox.classList.add("card");
+statusBox.innerHTML = `
+  <h2>System Status</h2>
+  <p>🟢 All systems operational</p>
+`;
+main.appendChild(statusBox);
+statusCard = statusBox;
 
   // -------------------------
   // AI RESPONSE CARD
   // -------------------------
-  const aiBox = document.createElement("div");
-  aiBox.classList.add("card");
-  aiBox.innerHTML = `
-    <h2>AI Response Console</h2>
-    <p>Waiting for input...</p>
-  `;
-  main.appendChild(aiBox);
-  aiCard = aiBox;
+const aiBox = document.createElement("div");
+aiBox.classList.add("card");
+aiBox.innerHTML = `
+  <h2>AI Response Console</h2>
+  <p>Waiting for input...</p>
+`;
+main.appendChild(aiBox);
+aiCard = aiBox;
 
 
   // -------------------------
