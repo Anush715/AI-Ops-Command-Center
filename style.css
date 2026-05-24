@@ -21,56 +21,47 @@ body {
 /* SIDEBAR */
 .sidebar {
   width: 220px;
-  background: #111827;
+  background: rgba(10, 15, 30, 0.9);
+  border-right: 1px solid rgba(255,255,255,0.08);
   padding: 20px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar li {
-  padding: 12px 0;
-  cursor: pointer;
-}
-
-/* MAIN AREA */
-.main {
-  flex: 1;
-  padding: 20px;
-}
-
-/* CARDS */
-.card {
-  background: rgba(30, 41, 59, 0.7);
-  backdrop-filter: blur(10px);
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.02);
 }
 
 .nav-item {
   padding: 10px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
-  border-radius: 6px;
+  transition: 0.2s;
 }
 
 .nav-item:hover {
-  background: #1e293b;
+  background: rgba(255,255,255,0.08);
 }
 
 .nav-item.active {
   background: #3b82f6;
   color: white;
-  font-weight: bold;
+}
+
+/* MAIN AREA */
+.main {
+  padding: 20px;
+  display: grid;
+  gap: 15px;
+}
+
+/* CARDS */
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .main .card {
