@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Ops Command Center</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- TOP HEADER -->
+  <header class="topbar">
+    <h1>AI Ops Command Center</h1>
+    <p>Real-Time System Monitoring Dashboard</p>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <div class="container">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <h3>Control Panel</h3>
+      <ul>
+        <li class="nav-item" data-page="dashboard">📊 Dashboard</li>
+        <li class="nav-item" data-page="logs">📡 Live Logs</li>
+        <li class="nav-item" data-page="alerts">🚨 Alerts</li>
+        <li class="nav-item" data-page="ai">🧠 AI Monitor</li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+      <!-- SYSTEM STATUS -->
+      <section class="card">
+        <h2>System Status</h2>
+        <p>🟢 All systems operational</p>
+      </section>
+
+      <!-- LIVE ACTIVITY -->
+      <section class="card">
+        <h2>Live Activity Feed</h2>
+        <p>No activity yet...</p>
+      </section>
+
+      <!-- AI RESPONSE BOX -->
+      <section class="card">
+        <h2>AI Response Console</h2>
+        <p>Waiting for input...</p>
+      </section>
+
+    </main>
+
+  </div>
+  
+  <script src="views/dashboard.js"></script>
+<script src="views/logs.js"></script>
+<script src="views/alerts.js"></script>
+<script src="views/ai.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
